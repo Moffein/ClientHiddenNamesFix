@@ -11,7 +11,7 @@ namespace R2API.Utils
 }
 namespace ClientHiddenNamesFix
 {
-    [BepInPlugin("com.Moffein.ClientHiddenNamesFix", "ClientHiddenNamesFix", "1.0.0")]
+    [BepInPlugin("com.Moffein.ClientHiddenNamesFix", "ClientHiddenNamesFix", "1.0.1")]
     public class ClientHiddenNamesFix : BaseUnityPlugin
     {
         private void Awake()
@@ -23,7 +23,7 @@ namespace ClientHiddenNamesFix
         {
             foreach (NetworkUser netUser in NetworkUser.instancesList)
             {
-                if (netUser.userName.Equals("???")) netUser.UpdateUserName();
+                netUser.UpdateUserName();
             }
         }
     }
